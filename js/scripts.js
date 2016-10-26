@@ -1,18 +1,14 @@
-$(document).ready() {
+$(document).ready(function() {
 
   $("form#favorites").submit(function(event){
 
-    var favorites = ["favorFood", "favorCar", "favorFlower"];
 
-    favorites.forEach(function(favorite){
+    var favorites = ["favorite1", "favorite2", "favorite3", "favorite4"];
+
+    favorites.forEach(function(favorite) {
       var userInput = $("input#" + favorite).val();
-      favorites.push(userInput)
-      console.log(userInput);
-    })
-
-
-
-
+      $("ul").append("<li>" + userInput + "</li>");
+    });
 
     event.preventDefault();
 
